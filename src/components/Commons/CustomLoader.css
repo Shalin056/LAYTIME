@@ -1,0 +1,46 @@
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.324);
+  z-index: 10000;
+}
+
+.loading-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #cd4b4b; /* Add a border around the box */
+  border-radius: 8px; /* Adjust border-radius as needed */
+  padding: 20px; /* Add padding to the box */
+  background-color: white; /* Background color for the box */
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #cd4b4b;
+  border-top: 5px solid #f3f3f397;
+  border-radius: 50%;
+  animation: spinner 1s linear infinite;
+}
+
+.loading-text {
+  margin-top: 10px;
+  font-size: 18px;
+}
